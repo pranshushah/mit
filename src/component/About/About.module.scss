@@ -1,0 +1,152 @@
+@import "../../scssUtils/variable";
+@import "../../scssUtils/media";
+.container {
+  color: $primaryColor;
+  width: 90%;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include ipad() {
+    width: 95%;
+  }
+  @include tablet() {
+    width: 95%;
+  }
+  @include ipad-pro() {
+    width: 95%;
+  }
+}
+
+.heading {
+  margin: 1rem;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  text-transform: capitalize;
+  @include ipad() {
+    font-size: 2.7rem;
+  }
+  @include tablet() {
+    font-size: 2.7rem;
+  }
+  @include mobile() {
+    font-size: 2.7rem;
+  }
+
+  @include se() {
+    font-size: 2.5rem;
+  }
+}
+
+.imgContainer {
+  width: 45%;
+  margin: 8px auto;
+  height: 50vh;
+  @include ipad() {
+    width: 70%;
+    height: 20vh;
+  }
+  @include tablet() {
+    width: 50%;
+    height: 40vh;
+  }
+  @include ipad-pro() {
+    width: 50%;
+    height: 30vh;
+  }
+  @include mobile() {
+    width: 90%;
+    height: 35vh;
+  }
+  @include se() {
+    width: 90%;
+    height: 40vh;
+  }
+  .img {
+    border-radius: 5px;
+    height: 100%;
+    box-shadow: 0px 1px 5px 4px rgba(150, 150, 150, 0.5);
+  }
+}
+
+.text {
+  width: 75%;
+  margin: 8px auto;
+  font-size: 1.2rem;
+  line-height: 25px;
+
+  @include ipad() {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+
+  @include tablet() {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  @include mobile() {
+    font-size: 0.9rem;
+    line-height: 23px;
+    width: 98%;
+  }
+  @include se() {
+    font-size: 0.8rem;
+    line-height: 23px;
+    width: 96%;
+  }
+}
+
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  width: 75%;
+  line-height: 25px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  @include mobile() {
+    width: 98%;
+    font-size: 0.9rem;
+  }
+  @include ipad() {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+  @include tablet() {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+  @include se() {
+    width: 98%;
+    font-size: 0.8rem;
+  }
+}
+
+.listItem {
+  width: 33%;
+  @include mobile() {
+    width: 50%;
+  }
+  @include se() {
+    width: 50%;
+  }
+}
+
+.bullet {
+  margin-right: 8px;
+  @include mobile() {
+    margin-right: 6px;
+  }
+  @include ipad() {
+    margin-right: 7px;
+  }
+  @include tablet() {
+    margin-right: 7px;
+  }
+  @include se() {
+    margin-right: 4px;
+  }
+}

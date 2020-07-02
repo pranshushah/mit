@@ -1,0 +1,98 @@
+@import "../../scssUtils/variable";
+@import "../../scssUtils/media";
+.navContainer {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 0px 1px 5px 5px rgba(150, 150, 150, 0.7);
+  @include ipad-pro() {
+    height: 7vh;
+  }
+  @include ipad() {
+    height: 8vh;
+  }
+  @include mobile() {
+    justify-content: center;
+    height: 9vh;
+  }
+
+  @include se() {
+    justify-content: center;
+    height: 9vh;
+  }
+}
+
+.ImgContainer {
+  width: 30%;
+  @include mobile() {
+    width: 0%;
+    display: none;
+  }
+  @include se() {
+    width: 0%;
+    display: none;
+  }
+  .Img {
+    height: 17vh;
+    @include ipad-pro() {
+      height: 12vh;
+    }
+    @include ipad() {
+      height: 10vh;
+    }
+  }
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 100%;
+  width: 50%;
+  @include mobile() {
+    width: 100%;
+  }
+  @include se() {
+    width: 100%;
+  }
+
+  .linkContainer {
+    display: block;
+    height: 100%;
+    padding-top: 2.5vh;
+    font-size: 1.4rem;
+    margin-right: 2rem;
+    @include ipad-pro() {
+      font-size: 1.5rem;
+    }
+    @include mobile() {
+      font-size: 1.3rem;
+      margin-right: 0.8rem;
+      margin-left: 0.8rem;
+    }
+    @include se() {
+      font-size: 1.1rem;
+      margin-right: 0.7rem;
+      margin-left: 0.7rem;
+    }
+  }
+  .link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: $primaryColor;
+    border-bottom: 0px solid white;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      border-bottom: 4px solid #666666;
+    }
+  }
+}
+
+.activeNavLink {
+  border-bottom: 4px solid #666666 !important;
+}

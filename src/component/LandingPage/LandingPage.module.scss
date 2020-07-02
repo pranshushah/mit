@@ -1,0 +1,77 @@
+@import "../../scssUtils/media";
+@import "../../scssUtils/variable";
+
+.landingContainer {
+  margin-top: 5px;
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6)
+  );
+  opacity: 1 !important ;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  @include ipad-pro() {
+    height: 93vh;
+  }
+  @include ipad() {
+    height: 93vh;
+  }
+}
+.heading {
+  position: absolute;
+  top: 10%;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: $primaryColor;
+  left: 10%;
+  font-size: 3rem;
+  text-transform: uppercase;
+  @include ipad-pro() {
+    top: 15%;
+    font-size: 3.2rem;
+  }
+  @include ipad() {
+    top: 15%;
+    font-size: 3.2rem;
+  }
+  @include mobile() {
+    font-size: 2rem;
+  }
+
+  @include se() {
+    left: 5%;
+    font-size: 2rem;
+  }
+}
+
+.text {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  line-height: 25px;
+  font-size: 1.2rem;
+  padding-right: 10%;
+  @include ipad-pro() {
+    top: 22%;
+    font-size: 1.2rem;
+  }
+  @include ipad() {
+    top: 24%;
+    font-size: 1.2rem;
+  }
+  @include mobile() {
+    top: 18%;
+    font-size: 0.9rem;
+    line-height: 23px;
+  }
+  @include se() {
+    left: 5%;
+    top: 18%;
+    line-height: 22px;
+    font-size: 0.9rem;
+  }
+}

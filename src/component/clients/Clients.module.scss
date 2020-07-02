@@ -1,0 +1,76 @@
+@import "../../scssUtils/variable";
+@import "../../scssUtils/media";
+.container {
+  color: $primaryColor;
+  width: 95%;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.imagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2rem;
+  .imageContainer {
+    padding-top: 10px;
+    width: 22%;
+    overflow: hidden;
+    height: 30vh;
+    box-shadow: 0px 1px 5px 5px rgba(150, 150, 150, 0.2);
+    margin: 1rem;
+    transition: all 0.5s ease-in-out;
+    @include ipad-pro() {
+      height: 22vh;
+    }
+    @include tablet() {
+      height: 35vh;
+      width: 25%;
+    }
+    @include ipad() {
+      height: 22vh;
+    }
+    @include mobile() {
+      height: 28vh;
+      width: 40%;
+    }
+    @include se() {
+      height: 40vh;
+      width: 60%;
+      margin: 1rem auto;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+    .img {
+      height: 70%;
+    }
+    .text {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 8px;
+      text-align: center;
+      padding-top: 8px;
+      border-top: 1px solid #666666;
+      @include ipad-pro() {
+        font-size: 1rem;
+      }
+      @include ipad() {
+        font-size: 1rem;
+      }
+    }
+  }
+}
